@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace CustomControls.RJControls
+namespace RJCodeAdvance.RJControls
 {
     public class RJButton : Button
     {
@@ -94,8 +94,7 @@ namespace CustomControls.RJControls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            base.OnPaint(pevent);
-           
+            base.OnPaint(pevent);           
 
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
@@ -143,7 +142,6 @@ namespace CustomControls.RJControls
             base.OnHandleCreated(e);
             this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
         }
-
         private void Container_BackColorChanged(object sender, EventArgs e)
         {
             this.Invalidate();
